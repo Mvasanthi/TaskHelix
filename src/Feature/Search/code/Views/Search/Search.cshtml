@@ -1,0 +1,54 @@
+@{
+    ViewBag.Title = "SOLR Search Component";
+}
+
+<h2>Search Item</h2>
+<div class="form-example">
+    <label for="name">Search Item </label>
+    <input type="text" name="name" id="searchInput" required>
+</div>
+<br />
+<br />
+
+<div class="form-example">
+    <button class="favorite styled" type="button" id="searchButton">
+        Search
+    </button>
+</div>
+
+<div id="resultsItem"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+		$(document).ready(function () {
+			$("#searchButton").click(function (e) {
+				// debugger;
+				e.preventDefault();
+				$.ajax({
+					type: "GET",
+					datatype: "JSON", url: "@Url.Action("DoSearch", "AlexaSearchIndex")",
+					contentType: "application/json",
+					data: {
+						searchText: $("#searchInput").val()
+					},
+					success: function (result) {
+						var resultText = "";
+						$('#resultsItem').text(resultText);
+						$('#resultsItem').append("Results from SOLR index <BR><BR>");
+						$(result.Results).each(function (index, item) {
+							// each iteration
+							var Description = item.Description;
+							var Title = item.Title;
+							var Author = item.Author;
+							var ItemName = item.ItemName;
+							resultText += (index + 1) + " - " + ItemName + Title + "; " + Author + "; " + Description + "; " + "<BR><BR>";
+						});
+						$('#resultsItem').append(resultText);
+					},
+					error: function (result) {
+						alert('error');
+					}
+				});
+			});
+		});
+</script>

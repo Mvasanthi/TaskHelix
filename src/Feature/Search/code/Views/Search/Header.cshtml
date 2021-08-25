@@ -1,0 +1,13 @@
+
+
+@{
+    // var item = Sitecore.Context.Database.GetItem("/sitecore/content/Alexa/WebsiteSettings/LocalWebSettings");
+    var item = Sitecore.Context.Database.GetItem("{2E4B2C59-270D-45BD-BA8A-F4369CAF19D1}");
+}
+
+<div class="jumbotron text-white bg-primary">
+    <h1 class="display-3"> @Html.Raw(item.Fields["Header-Tittle"].Value)</h1>
+   
+    <br/>
+    @Html.Raw(item.Fields["Header-Sub Tittle"].Value)
+</div>

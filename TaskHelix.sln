@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{C6594660-7CED-4EE6-BDE3-A807A545685B}"
+	ProjectSection(SolutionItems) = preProject
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		package.json = package.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{8205E186-99FA-44E5-8D70-D25C1F9B1D83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{F9D49B7C-97B6-4FDD-B2AB-1B7EC5D253C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{E3E3BCF4-6CBE-474D-8330-F361E6761DB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{CFE990BB-AC52-4312-A959-869569E0B540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskHelix.Feature.Search", "src\Feature\Search\code\TaskHelix.Feature.Search.csproj", "{666C0BE3-F43A-4E92-A107-849239DD26C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{666C0BE3-F43A-4E92-A107-849239DD26C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666C0BE3-F43A-4E92-A107-849239DD26C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666C0BE3-F43A-4E92-A107-849239DD26C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666C0BE3-F43A-4E92-A107-849239DD26C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFE990BB-AC52-4312-A959-869569E0B540} = {8205E186-99FA-44E5-8D70-D25C1F9B1D83}
+		{666C0BE3-F43A-4E92-A107-849239DD26C6} = {CFE990BB-AC52-4312-A959-869569E0B540}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB718B60-F3B0-4729-8A31-3F3CCA0C9EEB}
+	EndGlobalSection
+EndGlobal
